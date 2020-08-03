@@ -30,6 +30,8 @@ def player_movement(direction):
         player_movement(up):
             player = map[0 + 1, 0]
     """
+    player_location_reset()
+
     if direction == "up":
         map[0 - 1][0] = player
     elif direction == "down":
@@ -40,7 +42,7 @@ def player_movement(direction):
         map[0][0 - 1] = player
     else:
         print("Invalid command")
-    player_location_reset()
+        map[0][0] = player
     map_print()
     return
 
