@@ -28,7 +28,7 @@ def player_location_reset():
 def player_movement(direction):
     """ Player movement directions are called with this function
         player_movement(up):
-            player = map[0 + 1, 0]
+            player = map[0 - 1, 0]
     """
     player_location_reset()
 
@@ -37,9 +37,9 @@ def player_movement(direction):
     elif direction == "down":
         map[0 + 1][0] = player
     elif direction == "left":
-        map[0][0 + 1] = player
-    elif direction == "right":
         map[0][0 - 1] = player
+    elif direction == "right":
+        map[0][0 + 1] = player
     else:
         print("Invalid command")
         map[0][0] = player
