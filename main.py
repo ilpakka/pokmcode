@@ -18,7 +18,7 @@ def player_location_reset():
     """ Resets the previous location of player
         back to a free space '0'
     """
-    if player_last_location == True or 0:
+    if player_last_location:
         for i in range(len(map)):
             for j in range(len(map[i])):
                 if map[i][j] == "x":
