@@ -43,15 +43,22 @@ def player_movement(direction):
     else:
         print("Invalid command")
         map[0][0] = player
-    map_print()
     return
 
-##################################################################
+def start():
+    """ This starts the instance """
 
-map_print()
+    while(True):
+        map_print()
 
-print("Which way would you like to go:")
-print("Up, Down, Left or Right?")
-player_movement_choice = input("Your choice:")
-player_movement(player_movement_choice.lower())
-# this is a sample test to show a single-turn run
+        if player_last_location == False:
+            break
+
+        print("Which way would you like to go:")
+        print("Up, Down, Left or Right?")
+        player_movement_choice = input("Your choice:")
+        player_movement(player_movement_choice.lower())
+
+        # this is a sample test to show a single-turn run
+
+start()
