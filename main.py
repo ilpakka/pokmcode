@@ -93,7 +93,7 @@ class Goal(turtle.Turtle):
 levels = [""]
 
 # Defining the first level
-# player = 'P'  wall = 'X'
+# player = 'P'  wall = 'X'  goal = 'M'
 level_1 = [
     "XXXXXXXXXXXXXXXXXXXXXXXXX",
     "XP XXXXXXXX   M  XXXXXXXX",
