@@ -1,6 +1,6 @@
-import turtle
+import turtle # Due to grid not exceeding 288 by 288
 import math
-import pygame
+# import pygame // Currently not needed
 
 
 wn = turtle.Screen()
@@ -14,7 +14,7 @@ class Generator(turtle.Turtle):
         turtle.Turtle.__init__(self)
         self.shape("square")
         self.color("white")
-        self.penup()
+        self.penup() # You can comment this line to see the actual drawing path
         self.speed(0)
 
 class Player(turtle.Turtle):
