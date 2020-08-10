@@ -1,5 +1,6 @@
 import turtle # Due to grid not exceeding 288 by 288
-import math
+from math import sqrt
+# Matikka mitä tarvitaan on tarpeeksi yksinkertaista, että ei tarvitse import koko math-kirjastoa.
 # import pygame // Currently not needed
 
 
@@ -67,11 +68,14 @@ class Player(turtle.Turtle):
         a = self.xcor() - other.xcor()
         b = self.ycor() - other.ycor()
         distance = math.sqrt((a ** 2) + (b ** 2))
-
+        
         if distance < 5:
             return True
         else:
             return False
+        # Tän voi ilmaista suoraan
+        # return distance < 5, 
+        # koska "<" saa arvon bool
 
 class Goal(turtle.Turtle):
 
