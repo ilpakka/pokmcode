@@ -69,13 +69,8 @@ class Player(turtle.Turtle):
         b = self.ycor() - other.ycor()
         distance = math.sqrt((a ** 2) + (b ** 2))
         
-        if distance < 5:
-            return True
-        else:
-            return False
-        # Tän voi ilmaista suoraan
-        # return distance < 5, 
-        # koska "<" saa arvon bool
+        return distance < 5
+
 
 class Goal(turtle.Turtle):
 
